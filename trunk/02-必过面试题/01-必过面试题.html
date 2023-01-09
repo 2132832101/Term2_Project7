@@ -1,0 +1,124 @@
+1 数据类型
+(a) undefind null boolean string number
+(b) object (object array function)
+面试题: 如何检测一个变量是否是数组
+
+Array.isArray( 变量 ) // 如果是true 就是数组 否则不是
+变量 instanceof Array // 如果是true 就是数组 否则不是
+
+
+2 如何转化类型
+parseFloat() // 转为浮点数
+parseInt() // 转为整数
+
++ 字符串 // 变为字符串
+- 数字 // 变为数字
+
+3 数组从小到大排序?
+a 冒泡排序法
+b 选择排序法
+c 插入排序法
+d 改进数组自带sort()方法
+
+4 数组从大到小排序?
+a sort()方法
+
+5 mouseover/mouseout与mouseenter/mouseleave的区别与联系
+1、mouseover和mouseout在父元素和其子元素都可以触发，当鼠标穿过一个元素时，触发次数得依子元素数量而言。
+2、mouseenter和mouseleave只在父元素触发，当鼠标穿过一个元素时，只会触发一次。
+3、mouseover和mouseout比mouseenter和mouseleave先触发
+
+6 forEach和map和filter的区别
+forEach,map,filter都在对象内接收一个函数,这个函数都可以接收三个参数,第一个表示数组的子项,第二个表示数组的索引 (index),
+第三表示遍历数组所在的数组全部数据!map,和filterreturn返回的新数组不会替换原数组,需要接收一个新变量存储新的数组!
+而filter的return可以设置筛选条件用于数组数据的筛选!
+
+7 offsetWidth/offsetHeight、clientWidth/clientHeight与scrollWidth/scrollHeight的区别?
+offsetWidth/offsetHeight 返回值包含 content + padding + border，效果与 e.getBoundingClientRect ()相同
+clientWidth/clientHeight 返回值只包含 content + padding，如果有滚动条，也不包含滚动条
+
+8 ==与===的区别?
+== 代表相同， ===代表严格相同（数据类型和值都相等）。
+
+9 null和undefinde的区别?
+类型不同前者返回的是未定义值后者是对象；转换原始类型方式不同前者是不支持转换后者值为0
+大多数使用JavaScript的人都会误解null和undefined之间的关系，这两个实体之间的关系不明确会导致严重问题。
+
+10 字符串操作方法 (8个)
+1. length
+2. str [idx]、charAt ()、charCodeAt ()
+3. indexOf () 、lastIndexOf ()
+4. search ()
+5. slice ()
+6. substring ()
+7. substr ()
+8. replace ()
+
+11 数组操作方法 (10个)
+1. Array.map()
+2. Array.filter()
+3. Array.find()
+4. Array.findIndex()
+5. Array.forEach()
+6. for...of
+7. for...in
+8. Array.every()
+9. Array.some()
+10. Array.reduce()
+
+12 js中定时器有哪些?他们的区别及用法是什么?
+1、单次定时器，使用setTimeout ()方法定义，可以在规定时间（以毫秒计）过后执行一次代码块；
+2、循环定时器，使用setInterval ()方法定义，按照指定的周期（以毫秒计）来重复执行某些代码。
+
+13 document.write和innerHTML的区别?
+document.write是重写整个document, 写入内容是字符串的html
+innerHTML是HTMLElement的属性，是一个元素的内部html内容
+
+
+14 解释一下DOM和BOM?
+1、核心（ECMAScript）：描述了JS的语法和基本对象。
+2、文档对象模型 （DOM）：处理网页内容的方法和接口。
+3、浏览器对象模型（BOM）：与浏览器交互的方法和接口。
+
+15 jQuery一个对象可以同时绑定多个事件,这是如何实现的?
+jQuery 可以给一个对象同时绑定多个事件，低层实现方式是使用 addEventListner 或 attachEvent 
+兼容不同的浏览器实现事件的绑定，这样可以给同一个对象注册多个事件。
+
+16 针对jQuery的优化方法?
+1、总是从 #id 选择器来继承
+2、在class前面使用tag
+3、使用子查询
+4、优化选择器以适用Sizzle的“从右至左”模型
+5、采用find ()，而不使用上下文查找
+6、利用强大的链式操作
+7、编写属于你的选择器
+8、缓存jQuery对象
+
+17 jQuery常用选择器
+a基本选择器
+{
+$("#myELement")
+$("div")
+$(".myClass")
+$("*")
+}
+b层次选择器
+{
+$("form input")
+$("#main > *")
+$("label + input")
+$("#prev ~ div")
+}
+c过滤选择器
+d基本过滤选择器
+e内容过滤选择器
+f可见性过滤选择器
+g属性过滤选择器
+h子元素过滤选择器
+i表单对象属性过滤选择器
+j表单选择器
+
+18 如何检测一个变量是不是NaN?
+let nanVar = NaN; let infinityVar = Infinity; let nullVar = null; let undefinedVar = undefined; 
+使用 Number.isFinite () 函数名 Number.isFinite () 函数检查变量是否为数字，还检查其是否为 有限值 。 
+因此，对于 NaN ， Infinity 或 -Infinity 的数字，它返回 false 
